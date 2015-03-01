@@ -13,25 +13,11 @@
 # interactionRadius #interaction distance
 # moveDistance #movement distance
 
-traitRange=c(0,1,2,3,4)
-nTraits=3
-nAgents=100
-xDim=10
-yDim=10
-birthRate=0.05
-deathRate=0.05
-timeSteps=1000
-innovationRate=0.1
-replacementRate=0.05
-interactionRadius=1
-moveDistance=1
-
-
-
 main<-function(nAgents=100,
                xDim=10,yDim=10,interactionRadius=1,moveDistance=1,
                timeSteps=1000,
-               nTraits=3,transmissionType=c("Vertical","Encounter","Prestige","Conformist"),traitRange=c(0,1,2,3,4),
+               nTraits=3,traitRange=c(0,1,2,3,4),
+               transmissionType=c("Vertical","Encounter","Prestige","Conformist"),traitRange=c(0,1,2,3,4),
                replacementRate=0.05,
                innovationRate=0.1,
                plotSim=TRUE,
