@@ -18,14 +18,17 @@
 
 
 
-main<-function(nAgents=100,energyCost=25,maxEnergy=100,resourceGrowthRate=20,
+main<-function(nAgents=50,energyCost=25,maxEnergy=100,resourceGrowthRate=20,
                nSteps=1000,dimX=30,dimY=30,memory=FALSE,
                decisionType=c("greedy","probabilistic"),
                plot=TRUE,verbose=TRUE,stochastic=TRUE,radius=1)
     {
         population=rep(0,nSteps) #placeholder for recording population size 
-        resource=matrix(round(runif(dimX*dimY,0,maxEnergy)),nrow=dimX,ncol=dimY) #initialise resource scape
-        maxResource=resource #maximum possible resource value per cell
+      # resource=matrix(round(runif(dimX*dimY,0,maxEnergy)),nrow=dimX,ncol=dimY) #initialise resource scape
+      # maxResource=resource #maximum possible resource value per cell
+        resource=matrix(50,nrow=dimX,ncol=dimY)
+        maxResource=resource*2 #maximum possible resource value per cell
+
         #initialise agents as a data.frame:
         agents=data.frame(energy=rep(maxEnergy/2,nAgents),x=ceiling(runif(nAgents,0,dimX)),y=ceiling(runif(nAgents,0,dimX)))
 
